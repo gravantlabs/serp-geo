@@ -1,0 +1,14 @@
+{
+  "name": "serp-geo",
+  "version": "0.2.0",
+  "description": "SERP Geo browser extension for Chrome and Firefox",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "license": "GPL-3.0-only",
+  "author": "GRAVANT LABS LLC",
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  },
+  "private": true
+}

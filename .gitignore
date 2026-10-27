@@ -1,0 +1,14 @@
+.DS_Store
+._*
+Thumbs.db
+*.swp
+*~
+*.bak
+*.log
+*.map
+*.zip
+*.xpi
+.idea/
+.vscode/
+node_modules/
+dist/

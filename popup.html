@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SERP Geo</title>
+    <link rel="preconnect" href="https://photon.komoot.io" crossorigin>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <div class="search-bar">
+      <input id="place-query" class="place-query" type="search"
+          placeholder="Search for a place" autocomplete="off" autofocus
+          aria-label="Search for a place">
+      <label class="switch" title="Use this place">
+        <input id="geo-switch" type="checkbox" aria-label="Use this place">
+      </label>
+    </div>
+    <p id="location-check" class="location-check" role="status" hidden></p>
+    <ul id="place-list" class="place-list" aria-live="polite"></ul>
+    <p id="status-message" class="status-message" role="status"></p>
+    <label class="lang-picker"
+        title="Changes the language of Google's menus and buttons. Results still come from the place you chose.">
+      Google language
+      <select id="ui-lang"></select>
+    </label>
+    <button id="open-compare" class="compare-link" type="button">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+          stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+        <rect x="2.5" y="3.5" width="6" height="13" rx="1.5"/>
+        <rect x="11.5" y="3.5" width="6" height="13" rx="1.5"/>
+      </svg>
+      <span>Compare results across places</span>
+      <span aria-hidden="true">›</span>
+    </button>
+    <footer>
+      <a href="https://gravantlabs.com/?utm_source=serp-geo&amp;utm_medium=extension"
+          target="_blank" rel="noopener">
+        Built by
+        <picture>
+          <source srcset="logo-dark.svg" media="(prefers-color-scheme: dark)">
+          <img src="logo.svg" alt="Gravant Labs" height="10">
+        </picture>
+      </a>
+    </footer>
+    <script src="geo.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

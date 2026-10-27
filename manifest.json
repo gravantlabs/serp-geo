@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "SERP Geo",
+  "short_name": "SERP Geo",
+  "version": "0.2.0",
+  "description": "See Google results the way people in any city see them. Compare one search across several places, side by side.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SERP Geo"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "scripts": [
+      "geo.js",
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "storage",
+    "cookies",
+    "declarativeNetRequest",
+    "alarms"
+  ],
+  "host_permissions": [
+    "*://*.google.com/*",
+    "https://photon.komoot.io/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/search*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "serp-geo@gravantlabs.com",
+      "strict_min_version": "128.0"
+    }
+  }
+}

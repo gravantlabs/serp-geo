@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SERP Geo · Compare</title>
+    <link rel="stylesheet" href="compare.css">
+  </head>
+  <body>
+    <form id="compare-form" role="search">
+      <div class="toolbar">
+        <h1>Compare</h1>
+        <input id="search-term" class="field search-term" type="search"
+            placeholder="Search term" autocomplete="off"
+            aria-label="Search term" autofocus>
+        <span class="spacer"></span>
+        <select id="ui-lang" class="lang-select"
+            aria-label="Google interface language"
+            title="Changes the language of Google's menus and buttons. Results still come from the place you chose."></select>
+        <button type="submit" class="compare-button">Compare</button>
+      </div>
+      <div class="tokens">
+        <ul id="place-chips" class="place-chips" aria-label="Places"></ul>
+        <div class="add-place">
+          <input id="place-input" class="field" type="search"
+              placeholder="Add a place" autocomplete="off"
+              aria-label="Add a place" aria-controls="place-suggestions">
+          <ul id="place-suggestions" class="place-suggestions" role="listbox"
+              hidden></ul>
+        </div>
+      </div>
+    </form>
+    <main id="result-grid"></main>
+    <script src="geo.js"></script>
+    <script src="compare.js"></script>
+  </body>
+</html>
